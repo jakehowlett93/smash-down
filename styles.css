@@ -5,11 +5,9 @@
     max-width: 1125px;
 }
 
-
-
 .image {
-    width: 85px;
-    height: 55px;
+    width: 35px;
+    height: 25px;
     margin: 0px;
     outline: 1px solid;
 }
@@ -22,7 +20,7 @@
     position: absolute !important;
     top: -9999px !important;
     left: -9999px !important;
- }
+}
 
 .form {
     text-align: center;
@@ -36,4 +34,21 @@
 .scores {
     border-style: solid;
     border-width: 1px;
+}
+
+
+
+
+@media screen and (min-width: 227px) {
+    .image {
+        width: 65px;
+        height: 50px;
+    }
+}
+
+@media screen and (min-width: 362px) {
+    .image {
+        width: 85px;
+        height: 65px;
+    }
 }
