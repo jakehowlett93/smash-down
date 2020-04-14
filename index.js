@@ -16,23 +16,14 @@ $(document).ready(function () {
         }
     }
     
-    const table = $('.table:first');
-    table.addClass('table')
-    let counter = 1
-    for (let row = 0; row < 7; row++) {
-        let tableRow = $('<tr></tr>').addClass('row');
-        for (let column = 0; column < 13; column++) {
-            if (counter < 81) {
-                const cell = $('<td></td>');
-                cell.addClass('cell')
-                let portrait = $('<img>',{id:counter, src:'./portraits/'+counter+'.png', class:'portrait'})
-                cell.append(portrait)
-                cell.click((event) => {handleSelectClick(event)})
-                tableRow.append(cell);
-                counter++
-            }
-        }
-        table.append(tableRow);
+    const portraits = $('.portraits:first');
+    portraits.addClass('table')
+    for (let element = 1; element < 81; element++) {
+        let image = $('<img>',{id:element, src:'./portraits/'+element+'.png', class:'image'})
+        image.click((event) => {handleSelectClick(event)})
+        const cell = $('<td></td>')
+        cell.append(image)
+        portraits.append(cell);           
     }
     showScoreForm()
 
