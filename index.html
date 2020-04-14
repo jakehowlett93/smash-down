@@ -8,7 +8,21 @@
     </head>
     <body>
         <main class='main'>
-            
+            <div class="scores">
+                <div class="playerOne">
+                    <h5>player 1:</h5>
+                    <h5 class="playerOneScore"></h5>
+                </div>
+                <div class="playerTwo">
+                    <h5>player 2:</h5>
+                    <h5 class="playerTwoScore"></h5>
+                </div>
+            </div>
+            <form class='form'>
+                <p>who won?</p>
+                <input type='button' value='Player One' class='playerOneButton button'>
+                <input type='button' value='Player Two' class='playerTwoButton button'>
+            </form>
         </main>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="module" src="/index.js"></script>
