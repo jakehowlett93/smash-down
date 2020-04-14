@@ -10,20 +10,27 @@
         <main class='main'>
             <div class="portraits"></div>
             <div class="scores">
-                <div class="playerOne">
-                    <h5>player 1:</h5>
-                    <h5 class="playerOneScore"></h5>
+                <div class="playerOneParent">
+                    <div class="border" id="playerOne">
+                        <img class="playerBar" src='./assets/playerBars/playerOne.png' alt='player one'>
+                        <h1 class="playerScore" id="playerOneScore"></h1>
+                    </div>
+                    <form class='form hideElement'>
+                        <input type='button' value='Player 1 Won!' class='playerOneButton'>
+                    </form>
                 </div>
-                <div class="playerTwo">
-                    <h5>player 2:</h5>
-                    <h5 class="playerTwoScore"></h5>
+                <div class="playerTwoParent">
+                    <div class="border" id="playerTwo">
+                        <img class="playerBar" src='./assets/playerBars/playerTwo.png' alt='player two'>
+                        <h1 class="playerScore" id="playerTwoScore"></h1>
+                    </div>
+                    <form class='form hideElement'>
+                        <input type='button' value='Player 2 Won!' class='playerTwoButton'>
+                    </form>
+                </div>
                 </div>
             </div>
-            <form class='form'>
-                <p>who won?</p>
-                <input type='button' value='Player One' class='playerOneButton button'>
-                <input type='button' value='Player Two' class='playerTwoButton button'>
-            </form>
+
         </main>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="module" src="/index.js"></script>

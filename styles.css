@@ -1,8 +1,15 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 .portraits {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 1125px;
+    margin: auto;
 }
 
 .image {
@@ -22,6 +29,23 @@
     left: -9999px !important;
 }
 
+.border {
+    border-style: solid;
+    border-width: 3px;
+}
+
+#playerOne {
+    border-right: 0px;
+}
+
+.playerBar {
+    max-width: 100px;
+}
+
+.playerScore {
+    margin: 0px;
+}
+
 .form {
     text-align: center;
     border-style: solid;
@@ -32,8 +56,9 @@
 }
 
 .scores {
-    border-style: solid;
-    border-width: 1px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
 }
 
 
@@ -51,4 +76,16 @@
         width: 85px;
         height: 65px;
     }
+}
+
+@media screen and (min-width: 698px) {
+    .playerBar {
+        max-width: 175px;
+    }
+    
+    .playerScore {
+        margin: auto;
+    }
+
+
 }
