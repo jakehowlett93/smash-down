@@ -1,9 +1,20 @@
-.square {
+.table {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.portrait {
     width: 85px;
     height: 55px;
     margin: 0px;
     outline: 1px solid;
-
     background: #FFFFFF;
 }
 

@@ -2,7 +2,6 @@ $(document).ready(function () {
 
     const showScoreForm = () => {
         let selectedElementsList = $('.selected')
-        console.log(selectedElementsList)
         if  (!selectedElementsList.length % 2 === 0) {
             $('.form:first').removeClass('hideElement')
         }
@@ -17,25 +16,24 @@ $(document).ready(function () {
         }
     }
     
-    const table = $('<table></table>');
+    const table = $('.table:first');
     table.addClass('table')
     let counter = 1
     for (let row = 0; row < 7; row++) {
-        let tableRow = $('<tr></tr>');
+        let tableRow = $('<tr></tr>').addClass('row');
         for (let column = 0; column < 13; column++) {
             if (counter < 81) {
-                const rowData = $('<td></td>');
-                let portrait = $('<img>',{id:counter, src:'./portraits/'+counter+'.png', class:'square'})
-                rowData.append(portrait)
-                rowData.click((event) => {handleSelectClick(event)})
-                tableRow.append(rowData);
+                const cell = $('<td></td>');
+                cell.addClass('cell')
+                let portrait = $('<img>',{id:counter, src:'./portraits/'+counter+'.png', class:'portrait'})
+                cell.append(portrait)
+                cell.click((event) => {handleSelectClick(event)})
+                tableRow.append(cell);
                 counter++
             }
         }
         table.append(tableRow);
     }
-    $(".main").append(table);
-    $('.table').insertBefore($('.scores:first'))
     showScoreForm()
 
     let playerOneScore = 0
