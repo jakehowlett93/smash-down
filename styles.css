@@ -4,6 +4,26 @@
     text-align: center;
 }
 
+.rowSpacing {
+    margin-bottom: 5px;
+}
+
+.redTint{
+    background-image: linear-gradient(red, white)
+}
+
+.blueTint{
+    background-image: linear-gradient(blue, white)
+}
+
+.playerOneCursor {
+    cursor: url('./assets/cursors/playerOneCursor.png'), auto
+}
+
+.playerTwoCursor {
+    cursor: url('./assets/cursors/playerTwoCursor.png'), auto
+}
+
 .portraits {
     display: flex;
     flex-direction: row;
@@ -15,13 +35,14 @@
 
 .image {
     width: 35px;
-    height: 25px;
+    height: 100%;
     margin: 0px;
     outline: 1px solid;
 }
 
 .selected {
     filter: brightness(20%);
+    opacity: 60%
 }
 
 .hideElement {
@@ -38,6 +59,7 @@
 #playerOne {
     border-right: 0px;
 }
+
 
 .playerBar {
     max-width: 100px;
@@ -64,17 +86,17 @@
 
 
 
+
 @media screen and (min-width: 227px) {
     .image {
         width: 65px;
-        height: 50px;
     }
 }
 
-@media screen and (min-width: 362px) {
+@media screen and (min-width: 393px) {
     .image {
-        width: 85px;
-        height: 65px;
+        width: 120px;
+        height: 70px;
     }
 }
 
