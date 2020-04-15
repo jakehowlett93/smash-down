@@ -20,20 +20,11 @@ $(document).ready(function () {
         }
     }
 
-    //will refactor these into one function eventually
-    const handleScoreClick1 = (player) => {
-        player.empty()
-        playerOneScore++
-        player.append(playerOneScore)
-        $('.form').removeClass('hideElement') //does not work for some reason
+    const handleScoreClick = (playerDiv, playerScore) => {
+        playerDiv.empty()
+        playerDiv.append(playerScore)
+        $('.form').addClass('hideElement')
     }
-    const handleScoreClick2 = (player) => {
-        player.empty()
-        playerTwoScore++
-        player.append(playerTwoScore)
-        $('.form').removeClass('hideElement') //does not work for soem reason
-    }
-
     let selectedElements = [];
     
     const portraits = $('.portraits:first');
@@ -46,18 +37,22 @@ $(document).ready(function () {
         portraits.append(cell);           
     }
 
-    let playerOneScore = 0
-    let playerTwoScore = 0
+    let playerOneScore = 0;
+    let playerTwoScore = 0;
     const playerOne = $('#playerOneScore')
     playerOne.append(playerOneScore)
     const playerTwo = $('#playerTwoScore')
     playerTwo.append(playerTwoScore)
 
-    const playerOneButton = $('.playerOneButton:first')
-    playerOneButton.click(() => {handleScoreClick1(playerOne)})
-    const playerTwoButton = $('.playerTwoButton:first')
-    playerTwoButton.click(() => {handleScoreClick2(playerTwo)})
+    const playerOneButton = $('#playerOneButton')
+    playerOneButton.click(() => {
+        playerOneScore++
+        handleScoreClick(playerOne, playerOneScore)
+    })
+    const playerTwoButton = $('#playerTwoButton')
+    playerTwoButton.click(() => {
+        playerTwoScore++
+        handleScoreClick(playerTwo, playerTwoScore)
+    })
     
-
-
 });
