@@ -1,27 +1,22 @@
 $(document).ready(function () {
-    
-    const table = $('<table></table>').click((event) => {handleClick(event)});
-    let counter = 1
-    for (let column = 0; column < 6; column++) {
-        let tableRow = $('<tr></tr>');
-        for (let row = 0; row < 13; row++) {
-            if (counter < 75) {
-                var rowData = $('<td></td>');
-                rowData.append($('<img>',{id:counter, src:'./portraits/'+counter+'.png', class:'square'}))
-                tableRow.append(rowData);
-                counter++
-            }
+
+    const showScoreForm = (selectedElements) => {
+        if  (selectedElements.length % 2 === 0 && selectedElements.length > 0) {
+            $('.form').removeClass('hideElement')
+        } else {
+            $('.form').addClass('hideElement')
         }
-        table.append(tableRow);
     }
-    $(".main").append(table);
-    
-    const handleClick = (event) => {
+
+    const handleSelectClick = (event, selectedElements) => {
         const element = $(event.target)
         if (element.hasClass("selected")) {
             element.removeClass('selected')
+            selectedElements.pop()
         } else {
             element.addClass("selected");
+            selectedElements.push(1)
+            showScoreForm(selectedElements)
         }
     }
 
@@ -30,8 +25,6 @@ $(document).ready(function () {
         playerDiv.append(playerScore)
         $('.form').addClass('hideElement')
     }
-
-
     let selectedElements = [];
     
     const portraits = $('.portraits:first');
