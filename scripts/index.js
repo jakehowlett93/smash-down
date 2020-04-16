@@ -1,19 +1,11 @@
+import showScoreForm from './showScoreForm'
+
 $(document).ready(function () {
 
     const totalCharacters = 80
 
-    const showScoreForm = (selectedElements) => {
-        if  (selectedElements.length % 2 === 0 && selectedElements.length > 0) {
-            $('.form').removeClass('hideElement')
-        } else {
-            $('.form').addClass('hideElement')
-        }
-    }
-
     const handleSelectClick = (event, selectedElements) => {
         const element = $(event.target)
-        
-        
         if (!element.hasClass('selected')) {
             if (selectedElements.length % 2 === 0) {
                 element.parent().addClass('redTint')
@@ -27,6 +19,18 @@ $(document).ready(function () {
             element.addClass("selected");
             selectedElements.push(1)
             showScoreForm(selectedElements)          
+        } else {
+            element.parent().removeClass('redTint blueTint')
+            element.removeClass('selected')
+            selectedElements.pop()
+            if (selectedElements.length % 2 === 0) {
+                $(portraits).removeClass("playerTwoCursor")
+                $(portraits).addClass("playerOneCursor")
+            } else {
+                $(portraits).removeClass('playerOneCursor')
+                $(portraits).addClass("playerTwoCursor")
+            }
+            
         }
 
     }
