@@ -1,8 +1,10 @@
+import $ from 'jquery'
+
 const showScoreForm = (selectedElements) => {
     if  (selectedElements.length % 2 === 0 && selectedElements.length > 0) {
-        $('.form').removeClass('hideElement')
+        $('.form input').attr('disabled', false)
     } else {
-        $('.form').addClass('hideElement')
+        $('.form input').attr('disabled', true)
     }
 }
 
