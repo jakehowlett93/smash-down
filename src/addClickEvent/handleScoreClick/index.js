@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-const handleScoreClick = (playerElement, playerScore, player, totalCharacters) => {
+const handleScoreClick = (playerElement, player, playerScore, totalCharacters) => {
     playerElement.empty()
     playerElement.append(playerScore)
     $('.form input').attr('disabled', true)
