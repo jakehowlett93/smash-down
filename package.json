@@ -1,0 +1,29 @@
+{
+  "name": "smash-down",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakehowlett93/smash-down.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakehowlett93/smash-down/issues"
+  },
+  "homepage": "https://github.com/jakehowlett93/smash-down#readme"
+}
