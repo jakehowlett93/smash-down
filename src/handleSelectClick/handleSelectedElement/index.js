@@ -1,5 +1,5 @@
 import applyPlayerOneClasses from '../selectUtilities/applyPlayerOneClasses';
-import showScoreForm from '../selectUtilities/showScoreForm';
+import handleScoreForm from '../selectUtilities/handleScoreForm';
 import applyPlayerTwoClasses from '../selectUtilities/applyPlayerTwoClasses';
 
 const handleSelectedElement = (selectedElements, element) => {
@@ -10,7 +10,7 @@ const handleSelectedElement = (selectedElements, element) => {
     }
     element.addClass("selected");
     selectedElements.push(1)
-    showScoreForm(selectedElements)
+    handleScoreForm(selectedElements)
 }
 
 export default handleSelectedElement
