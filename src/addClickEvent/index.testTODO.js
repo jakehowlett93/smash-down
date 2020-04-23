@@ -9,7 +9,7 @@ jest.mock('./handleScoreClick')
 describe('addClickEvent', () => {
 
     document.body.innerHTML = 
-    '<div class="playerElement">' + +
+    '<div class="playerElement">' +
     '  <input type="button" class="playerButton" />' +
     '</div>';
 
