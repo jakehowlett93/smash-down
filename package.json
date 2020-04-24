@@ -20,7 +20,8 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "lint": "eslint \"src/**/*.js\""
+    "lint": "eslint \"src/**/*.js\"",
+    "prettier": "prettier --write src/**/*.js"
   },
   "repository": {
     "type": "git",
