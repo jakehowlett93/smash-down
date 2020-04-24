@@ -19,14 +19,9 @@ describe('addClickEvent', () => {
     const playerButton = $('.playerButton')
     const totalCharacters = 80;
 
-    beforeEach(() => {
+    beforeEach(() => {    
         addClickEvent(playerElement, player, playerScore, playerButton, totalCharacters)
-        
-    });
-
-    it('should add a click function to the playerElement that increases the score', () => {
-        playerButton.click()
-        expect(playerScore).toEqual(1)
+        playerButton.trigger('click');
     });
     it('should call handleScoreClick', () => {
         expect(handleScoreClick).toHaveBeenCalled()
