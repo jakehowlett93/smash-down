@@ -1,14 +1,14 @@
-import $ from 'jquery';
-import handleSelectedElement from './handleSelectedElement';
-import unselectElement from './unselectElement';
+import $ from "jquery";
+import handleSelectedElement from "./handleSelectedElement";
+import unselectElement from "./unselectElement";
 
 const handleSelectClick = (event, selectedElements) => {
-    const element = $(event.target)
-    if (!element.hasClass('selected')) {
-       handleSelectedElement(selectedElements, element)
+    const element = $(event.target);
+    if (!element.hasClass("selected")) {
+       handleSelectedElement(selectedElements, element);
     } else {
-        unselectElement(selectedElements, element)
+        unselectElement(selectedElements, element);
     }
-}
+};
 
-export default handleSelectClick
+export default handleSelectClick;
