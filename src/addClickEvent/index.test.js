@@ -6,8 +6,8 @@ jest.mock("./handleScoreClick");
 
 describe("addClickEvent", () => {
   document.body.innerHTML =
-    '<div class="playerElement">' +
-    '  <input type="button" class="playerButton" />' +
+    "<div class='playerElement'>" +
+    "  <input type='button' class='playerButton' />" +
     "</div>";
 
   const playerElement = $(".playerElement:first");
